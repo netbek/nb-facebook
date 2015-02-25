@@ -1,0 +1,30 @@
+# Patch/diff artifacts
+*.patch
+*.diff
+*.orig
+*.rej
+interdiff*.txt
+# emacs artifacts
+*~
+\#*\#
+# VI swap file
+*.swp
+# Hidden files
+.DS*
+.project
+# Windows links
+*.lnk
+# Temporary files
+tmp*
+# Drupal site
+sites/*/files/
+sites/*/settings.php
+# IDE project
+nbproject
+.idea
+# Vendor
+src/vendor/
+# Node modules
+node_modules/
+# Bower components
+bower_components/
