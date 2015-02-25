@@ -26,6 +26,7 @@
 	},
 	"dependencies": {
 		"angularjs": "1.2.x",
-		"nb-analytics": "https://github.com/netbek/nb-analytics.git#master"
+		"nb-analytics": "https://github.com/netbek/nb-analytics.git#master",
+		"nb-lodash": "https://github.com/netbek/nb-lodash.git#master"
 	}
 }
