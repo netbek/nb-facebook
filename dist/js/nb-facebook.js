@@ -125,6 +125,32 @@
 		};
 
 		/**
+		 * Determines if a user is logged in to Facebook and has authenticated the app.
+		 * https://developers.facebook.com/docs/reference/javascript/FB.getLoginStatus
+		 *
+		 * @param {Boolean} refresh The response from `FB.getLoginStatus()` is cached by default. Set to TRUE to force a refresh.
+		 * @returns {Promise}
+		 */
+		this.getLoginStatus = function (refresh) {
+			return self.init()
+				.then(function () {
+					var d = $q.defer();
+
+					window.FB.getLoginStatus(function (response) {
+						if (!response || response.error) {
+							d.reject(response);
+						}
+						else {
+							d.resolve(response);
+						}
+//						$rootScope.$apply();
+					}, refresh);
+
+					return d.promise;
+				});
+		};
+
+		/**
 		 * Prompts the user to authenticate the application using login dialog.
 		 * https://developers.facebook.com/docs/reference/javascript/FB.login/v2.2
 		 *
